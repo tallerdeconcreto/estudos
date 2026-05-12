@@ -3,50 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Formulario PDF para Discord</title>
+    <title>Denuncias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Spectral:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="app.js"></script>
   </head>
   <body>
     <main class="page">
       <header class="hero">
-        <p class="eyebrow">Envio rapido</p>
-        <h1>Formulario com PDF automatico</h1>
+        <p class="eyebrow">Denuncias</p>
+        <h1>Registro de infracao</h1>
         <p class="subtitle">
-          Preencha os dados, envie as imagens e gere um PDF que vai direto para o
-          Discord.
+          Informe o nome do usuario e descreva as atitudes que infringiram as
+          regras.
         </p>
       </header>
 
       <section class="card">
         <form id="report-form">
           <label class="field">
-            <span>Nome</span>
-            <input type="text" name="name" required placeholder="Seu nome" />
+            <span>Nome do usuario que infringiu regra</span>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Ex: usuario#1234"
+            />
           </label>
 
           <label class="field">
-            <span>E-mail (opcional)</span>
-            <input type="email" name="email" placeholder="voce@email.com" />
-          </label>
-
-          <label class="field">
-            <span>Mensagem</span>
+            <span>Descreva as atitudes do usuario</span>
             <textarea
               name="message"
-              rows="5"
+              rows="6"
               required
-              placeholder="Descreva o que precisa enviar"
+              placeholder="Explique o que aconteceu, quando e onde"
             ></textarea>
           </label>
 
-          <label class="field">
-            <span>Upload de imagens</span>
-            <input type="file" name="images" accept="image/*" multiple />
-            <small>Escolha uma ou mais imagens (JPG, PNG, WebP).</small>
-          </label>
-
-          <button type="submit" class="primary">Enviar</button>
+          <button type="submit" class="primary">Enviar denuncia</button>
           <p class="status" id="status" aria-live="polite"></p>
         </form>
       </section>
